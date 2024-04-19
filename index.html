@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
@@ -15,7 +16,7 @@
                 <a href="#" class="items-center text-2xl font-bold">XCELL</a>
             </div>
             <div>
-                <ul class="flex items-center justify-center gap-10">
+                <ul class="hidden lg:flex lg:items-center lg:justify-center lg:gap-10">
                     <li><a>Home</a></li>
                     <li><a>About</a></li>
                     <li><a>Services</a></li>
@@ -23,17 +24,27 @@
                 </ul>
             </div>
             <div>
+            <a class=" bg-yellow-400 lg:font-bold rounded px-3 py-1 lg:px-6 lg:py-3">Book an appointment</a>
+                <!-- <a>Login</a>
+                <button>Register</button> -->
+            </div>
+            <div class="lg:hidden">
                 <i class="fa-solid fa-bars fa-xl"></i>
             </div>
         </header>
         <!-- end of header -->
 
-        <main>
-            <div class="flex items-center justify-center">
-               
-                <img src="assets/mech5.webp" class="w-screen outline outline-white shadow-2xl shadow-black"> 
+        <main class="lg:flex">
+            <div class="flex items-center justify-center lg:flex-1 lg:order-2 lg:justify-end image-transform">
+               <!-- <div class="relative text-white "> -->
+                <!-- <h2 class="absolute text-white text-xl font-bold bottom-20">We are best car repair services</h2>
+                <h1 class=" absolute text-orange-700 text-2xl font-bold bottom-10">Make your car last longer</h1> -->
+                <img src="assets/mech5.webp" class="w-screen outline outline-white shadow-2xl shadow-black lg:h-[400px] lg:w-[400px] lg:rounded-full"> 
+                <!-- <a class="absolute top-20 right-20 lg:top-60 lg:right-20 bg-yellow-400 lg:font-bold rounded px-3 py-1 lg:px-6 lg:py-3">Book an appointment</a> -->
+                
+               <!-- </div>                 -->
             </div>
-            <div class="text-white mt-4">
+            <div class="text-white mt-4 lg:flex-1 lg:order-1 lg:mt-16 lg:px-6 text-transform">
                 <div>
                     <h1 class=" text-6xl text-center">Best Auto Maintainence Service</h1>
                 </div>
@@ -46,7 +57,7 @@
                     </p>
             </div>
                     
-            <div class="md:flex md:flex-row justify-between mt-7">                
+            <!-- <div class="md:flex md:flex-row justify-between mt-7">                
                 <div class=" border shadow-2xl shadow-black rounded-xl md:ml-[10%] mt-5">
                     <form class="flex flex-col md:items-center  lg:w-96 lg:h-96 md:mb-7 gap-6 mt-4 px-5 py-3">
                             <h1 class="text-4xl text-white text-center font-bold lg:mt-7 lg:mb-7">Contact Us</h1>
@@ -74,7 +85,7 @@
                         Our team of experienced technicians is equipped with the latest tools and equipment 
                         to diagnose and fix all makes and models of vehicle problems.
                     </p>
-            </div>
+            </div> -->
         </main>
         <footer class="bg-zinc-50 text-center dark:bg-neutral-700 lg:text-left">
             <div class="bg-black/5 p-4 text-center text-surface dark:text-white">
@@ -83,5 +94,15 @@
             </div>
           </footer>
     </div>
+    <script>
+        const scroll = ScrollReveal({
+            reset:true,
+            duration:2600 ,          
+            ditance:'40px'        
+        })
+       
+        scroll.reveal('.image-transform',{delay:200,origin:'top'});
+        scroll.reveal('.text-transform',{delay:100,origin:'left'});
+    </script>
 </body>
 </html>
